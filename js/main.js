@@ -10,6 +10,14 @@ const validateInput =(floorCount,liftCount)=>{
         alert("Enter positive numbers")
         return false;
     }
+    else if(Number(liftCount) > Number(floorCount)){
+        alert("No of lifts cannot be greater than number of floors");
+        return false;
+    }
+    else if(Number(liftCount)>20 || Number(floorCount)>20){
+        alert("Enter value less than or equal to 20");
+        return false;
+    }
     else if (Number(liftCount)==0 || Number(floorCount)==0)
     {
         alert("No. of Lifts or No. of floors cannot be zero");
